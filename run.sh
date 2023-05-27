@@ -9,4 +9,4 @@ export COAUTH_SYSTEM_SECRET="SYSTEM_SECRET"
 export COAUTH_USERNAME_SECRET="USERNAME_SECRET"
 export COAUTH_TOTP_SECRET="1234567890123456"
 
-java -jar orchestration/target/coauth-0.0.1-SNAPSHOT-fat.jar
+java -jar orchestration/target/coauth-core-0.0.1-SNAPSHOT-fat.jar

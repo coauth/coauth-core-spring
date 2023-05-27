@@ -2,7 +2,7 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <artifactId>core</artifactId>
+  <artifactId>coauth.core</artifactId>
   <build>
     <plugins>
 
@@ -211,7 +211,7 @@
   </dependencies>
   <description>CO-Auth is a standalone application managing the various authorization modes.
   </description>
-  <groupId>org.coauth.core</groupId>
+  <groupId>org.coauth</groupId>
   <modelVersion>4.0.0</modelVersion>
   <modules>
     <module>application-rest</module>

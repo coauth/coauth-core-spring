@@ -35,7 +35,7 @@
   <dependencies>
     <dependency>
       <artifactId>domain-dto</artifactId>
-      <groupId>org.coauth.core</groupId>
+      <groupId>org.coauth</groupId>
       <scope>compile</scope>
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
@@ -43,8 +43,8 @@
   <modelVersion>4.0.0</modelVersion>
   <packaging>jar</packaging>
   <parent>
-    <artifactId>core</artifactId>
-    <groupId>org.coauth.core</groupId>
+    <artifactId>coauth.core</artifactId>
+    <groupId>org.coauth</groupId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 

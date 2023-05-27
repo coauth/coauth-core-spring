@@ -34,17 +34,17 @@
   <dependencies>
     <dependency>
       <artifactId>domain-ports-api</artifactId>
-      <groupId>org.coauth.core</groupId>
+      <groupId>org.coauth</groupId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <artifactId>commons</artifactId>
-      <groupId>org.coauth.core</groupId>
+      <groupId>org.coauth</groupId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <artifactId>domain-dto</artifactId>
-      <groupId>org.coauth.core</groupId>
+      <groupId>org.coauth</groupId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
@@ -69,8 +69,8 @@
 
   <packaging>jar</packaging>
   <parent>
-    <artifactId>core</artifactId>
-    <groupId>org.coauth.core</groupId>
+    <artifactId>coauth.core</artifactId>
+    <groupId>org.coauth</groupId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 </project>

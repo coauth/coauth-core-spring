@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: coauth_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'COAUTH'
+      MYSQL_USER: 'coauth_user'
+      MYSQL_PASSWORD: 'coauth_password'
+      MYSQL_ROOT_PASSWORD: 'admin_password'
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+      --default-authentication-plugin=mysql_native_password
+      --init-file /docker-entrypoint-initdb.d/scripts.sql
+    network_mode: host
+    expose:
+      - '3306'
+    volumes:
+      - mysql-container-dev-db:/var/lib/mysql:rw
+      - './orchestration/src/main/resources/scripts.sql:/docker-entrypoint-initdb.d/scripts.sql'
+
+  coauth-core:
+    build:
+      dockerfile: ./Dockerfile-dev
+    image: coauth-core:latest
+    container_name: coauth-core
+    environment:
+      COAUTH_DB_IP: 'localhost'
+      COAUTH_DB_PORT: '3306'
+      COAUTH_DB_USERNAME: 'root'
+      COAUTH_DB_PASSWORD: 'admin_password'
+      COAUTH_JWT_SECRET: 'ThisIsSecretForJWTHS512SignatureAlgorithmThatMUSTHave64ByteLength'
+      COAUTH_SYSTEM_SECRET: 'SYSTEM_SECRET'
+      COAUTH_USERNAME_SECRET: 'USERNAME_SECRET'
+      COAUTH_TOTP_SECRET: '1234567890123456'
+    expose:
+      - '8080'
+    network_mode: host
+    depends_on:
+      - db
+
+volumes:
+  mysql-container-dev-db:

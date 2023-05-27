@@ -4,8 +4,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.coauth.core</groupId>
-    <artifactId>core</artifactId>
+    <groupId>org.coauth</groupId>
+    <artifactId>coauth.core</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
@@ -13,7 +13,7 @@
   <packaging>jar</packaging>
   <dependencies>
     <dependency>
-      <groupId>org.coauth.core</groupId>
+      <groupId>org.coauth</groupId>
       <artifactId>domain-dto</artifactId>
       <version>${project.version}</version>
     </dependency>
