@@ -1,0 +1,16 @@
+infrastructure-crypto:
+  secret:
+    system-secret: ${COAUTH_SYSTEM_SECRET}
+    username-secret: ${COAUTH_USERNAME_SECRET}
+  totp:
+    secret-key: ${COAUTH_TOTP_SECRET}
+    time-period: 30
+    allowed-discrepancy: 2
+  jwt:
+    secret: ${COAUTH_JWT_SECRET}
+    expiry: 3600
+  system:
+    encoder:
+      secret: ${COAUTH_SYSTEM_SECRET}
+      iteration: 33
+      key-length: 256
