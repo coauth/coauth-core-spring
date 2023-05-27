@@ -22,6 +22,7 @@ services:
 
   coauth-core:
     build:
+      context: .
       dockerfile: ./Dockerfile-dev
     image: coauth-core:latest
     container_name: coauth-core
