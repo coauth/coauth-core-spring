@@ -1,5 +1,21 @@
-# authable-core-api
-A Spring webflux based application which is the core to manage all business logic which an enterprise can connect to enable features
+# Co-Auth Core
 
-# Status:
-In Development
+The Core module of CO-Auth that is responsible for business logic and exposing auth module API's to external connectors
+
+### Contributions
+
+Refer [documentation](https://documentation.coauth.dev)
+
+### Documentation
+
+Refer [documentation](https://documentation.coauth.dev)
+
+### Code Of Conduct
+
+Refer [CO-Auth GitHub ](https://github.com/coauth)
+
+### Tech Stack:
+
+- Java 17
+- Spring Webflux
+- MySQL DB
